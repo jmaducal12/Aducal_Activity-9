@@ -1,0 +1,8 @@
+- name: install prometheus in Ubuntu
+  command: apt install prometheus -y
+  when: ansible_distribution == "Ubuntu"
+
+- name: install prometheus in CentOS
+  command: snap install prometheus --classic
+  when: ansible_distribution == "CentOS"
+
